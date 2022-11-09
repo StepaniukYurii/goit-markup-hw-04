@@ -75,6 +75,7 @@ p {
   letter-spacing: 0.02em;
 }
 .nav-link {
+  fill: var(--text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
   text-decoration: none;
@@ -82,8 +83,8 @@ p {
 }
 .nav-link:focus,
 .nav-link:hover {
+  fill: currentColor;
   color: var(--accent-color);
-  border-radius: 4px;
 }
 .header-menu-portfolio {
   gap: 50px;
@@ -103,10 +104,6 @@ p {
   font-weight: 500;
   text-decoration: none;
   color: var(--text-color);
-  fill: var(--text-color);
-}
-.header-contact-link:hover {
-  fill: var(--accent-color);
 }
 .hedder-contact-icon {
   width: 16px;
@@ -120,10 +117,11 @@ p {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/background-img.jpg);
-  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 200px 0;
   text-align: center;
+  background-position: center;
 }
 
 .hero-tittle {
@@ -165,6 +163,9 @@ p {
   color: var(--main-text-color);
   background: var(--button-background-color);
 }
+.b-portfolio {
+  padding: 6px 22px;
+}
 .b-order:hover,
 .b-order:focus {
   background-color: var(--button-background-color);
@@ -185,21 +186,7 @@ p {
   height: 50px;
   letter-spacing: 0.06em;
 }
-.b-everyone {
-  width: 73px;
-}
-.b-web-sites {
-  width: 125px;
-}
-.b-appendices {
-  width: 112px;
-}
-.b-design {
-  width: 103px;
-}
-.b-marketing {
-  width: 130px;
-}
+
 .description-section {
   padding-bottom: 0;
 }
@@ -220,13 +207,17 @@ p {
   gap: 30px;
   display: flex;
 }
-.description-block {
-  width: 270px;
-}
-.description-icon {
+.description-image {
+  padding: 25px 100px;
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
-  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--button-background-color);
+}
+.description-icon {
+  width: 70px;
+  height: 70px;
 }
 .description-title {
   margin-bottom: 10px;
@@ -293,17 +284,28 @@ p {
   justify-content: center;
   display: flex;
 }
-.team-contact-icon-main {
-  color: var(--background-color);
-  fill: red;
-}
-.team-contact-icon {
-  fill: currentColor;
+.team-block-logo {
   width: 44px;
   height: 44px;
 }
-.team-contact-icon:hover {
-  fill: var(--accent-color);
+.team-contact-link {
+  justify-content: center;
+  display: flex;
+  fill: var(--icon-color);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--background-color);
+  background-color: var(--background-color);
+}
+.team-contact-link:hover {
+  background-color: var(--accent-color);
+  fill: currentColor;
+}
+.team-icon {
+  width: 20px;
+  height: 20px;
 }
 .list-portfolio {
   flex-basis: calc((100% - 60px) / 3);
@@ -350,16 +352,28 @@ p {
   justify-content: center;
   gap: 30px;
 }
-.client-picture {
+.client-block-logo {
   width: 170px;
   height: 92px;
-  fill: #afb1b8;
+}
+.client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+  color: var(--accent-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.client-picture:hover {
+.client-link:hover {
   border-color: var(--accent-color);
-  fill: var(--accent-color);
+  fill: currentColor;
+}
+.client-logo {
+  width: 106px;
+  height: 60px;
 }
 .footer {
   padding-top: 60px;
@@ -368,6 +382,7 @@ p {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .list-footer-container {
   margin-top: 20px;
@@ -394,9 +409,8 @@ p {
 .tel-footer {
   margin-top: 9px;
 }
-.footer-icons {
+.join-wrapper {
   margin-left: 70px;
-  margin-top: 12px;
 }
 .join-tittle {
   letter-spacing: 0.03em;
@@ -409,11 +423,25 @@ p {
   display: flex;
   gap: 10px;
 }
-.footer-icon {
+.footer-social-container {
   width: 44px;
   height: 44px;
-  fill: rgba(255, 255, 255, 0.1);
 }
-.footer-social-icons [href="./images/symbol-defs.svg#icon-twitter"] {
-  fill: var(--accent-color);
+.footer-social-icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-icons:hover {
+  background-color: var(--accent-color);
+}
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
